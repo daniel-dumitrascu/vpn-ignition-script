@@ -43,7 +43,6 @@ elif selected_country not in countries:
 p1 = subprocess.Popen(split("echo " + user_pass), stdout=subprocess.PIPE)
 p2 = subprocess.Popen(split("sudo -S openvpn " + openvpn_conf_files_path + "/" + selected_country + ".conf"), stdin=p1.stdout)
 
-#process = subprocess.Popen(bashCmd, stdout=subprocess.PIPE)
 output, error = p2.communicate()
 print(output)
 		
